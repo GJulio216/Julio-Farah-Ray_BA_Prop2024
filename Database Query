@@ -1,0 +1,15 @@
+SELECT main.Order_Id,   
+        main.Order_Customer_Id,
+        orderd.Order_City,
+        orderd.Order_Country,
+        orderd.Order_Zipcode,
+        orderd.order_date_DateOrders,
+        orderd.Order_Item_Quantity,
+        orderd.Order_Item_Profit_Ratio,
+        orderd.Type,
+        orderd.Order_Status
+        
+
+FROM OrderData AS orderd 
+    LEFT JOIN MainTable AS main
+        ON orderd.Order_Customer_Id = main.Order_Customer_Id
