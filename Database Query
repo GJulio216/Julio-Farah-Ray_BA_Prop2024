@@ -13,3 +13,10 @@ SELECT main.Order_Id,
 FROM OrderData AS orderd 
     LEFT JOIN MainTable AS main
         ON orderd.Order_Customer_Id = main.Order_Customer_Id
+SELECT *
+            FROM OrderData
+            WHERE order_country = 'Alemania'
+
+            SELECT SUM(Order_Item_Quantity) AS total_sum
+            FROM OrderData
+            WHERE Order_Country = 'China'
