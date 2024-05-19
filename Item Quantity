@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# Data
+Countries = ['China', 'India', 'France', 'U.S.', 'Australia', 'Germany', 'Spain']
+Quantity = [8102, 9539, 27626, 54433, 16766, 19803, 8102]
+
+# Bar plot
+plt.bar(Countries, Quantity)
+
+# Labels
+plt.xlabel('Countries')
+plt.ylabel('Quantity')
+plt.title('Total Item Quantities By Country')
+
+# Graph
+plt.show()
