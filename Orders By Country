@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# Data
+Countries = ['China', 'India', 'France', 'U.S.', 'Australia', 'Germany', 'Spain']
+Orders = [5758, 4783, 13222, 24840, 8497, 9564, 3868]
+
+# Bar plot
+plt.bar(Countries, Orders)
+
+# Labels
+plt.xlabel('Countries')
+plt.ylabel('Orders')
+plt.title('Orders By Country')
+
+# Graph
+plt.show()
