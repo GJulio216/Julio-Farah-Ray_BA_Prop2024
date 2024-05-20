@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+
+# Data
+countries = ['United States', 'France', 'Germany']
+years = [2016,2017,2018]
+gdp_per_capita = {
+    'United States': [57866, 59907, 62823],  # GDP per capita in USD
+    'France': [42136, 44652, 47939],
+    'Germany': [37062, 38781, 41557]
+}
+plt.xticks([2016,2017,2018], ['2016','2017','2018'])
+
+# line plot
+for country in countries:
+    plt.plot(years, gdp_per_capita[country], label=country)
+
+# titles
+plt.xlabel('Years')
+plt.ylabel('GDP per Capita (USD)')
+plt.title('GDP per Capita Comparison (2016-2018)')
+
+plt.legend()
+plt.grid(True)
+plt.show()
