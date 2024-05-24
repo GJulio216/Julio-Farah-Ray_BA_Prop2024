@@ -16,7 +16,6 @@ WHERE (Order_Country = 'Estados Unidos')
     OR (Order_Country = 'Alemania')
     OR (Order_Country = 'Francia')
     
---GROUP BY Order_State
 
 ORDER BY Order_State asc 
 
