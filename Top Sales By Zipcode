@@ -1,0 +1,25 @@
+SELECT Order_City, Order_Country, Order_Zipcode, Order_State, Order_Profit_Per_Order, sales
+      FROM OrderData
+         WHERE order_country = 'Estados Unidos' AND Order_State = 'California' AND Sales >400
+            ORDER BY --Order_Profit_Per_Order,--
+                Sales DESC
+
+            SELECT SUM(Order_Item_Quantity) AS total_sum
+              FROM OrderData
+            WHERE Order_Country = 'China'
+
+            SELECT *
+              FROM OrderData
+            WHERE order_country = 'Estados Unidos'
+
+
+
+
+SELECT Order_City, Order_Country, Order_Zipcode, Order_State, Order_Profit_Per_Order, Sales
+    FROM OrderData
+      WHERE order_country = 'Estados Unidos' AND Order_State = 'California' AND Sales > 400
+ORDER BY (
+    SELECT COUNT(*)
+  FROM OrderData AS inner_table
+WHERE inner_table.Order_Zipcode = OrderData.Order_Zipcode
+) DESC, Sales DESC;
